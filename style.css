@@ -1,0 +1,93 @@
+ .navbar {
+      margin-bottom: 0;
+      background-color: #000066;
+      z-index: 9999;
+      border: 0;
+      font-size: 12px !important;
+      line-height: 1.42857143 !important;
+      letter-spacing: 4px;
+      border-radius: 0;
+      font-family: Montserrat, sans-serif;
+  }
+  .navbar li a, .navbar .navbar-brand {
+      color: #fff !important;
+  }
+  .navbar-nav li a:hover, .navbar-nav li.active a {
+      color: #000066 !important;
+      background-color: #fff !important;
+  }
+  .navbar-default .navbar-toggle {
+      border-color: transparent;
+      color: #fff !important;
+  }
+  
+  .cent{
+	margin-left:auto;margin-right:auto
+  }
+  .backWhite{
+	  background-color:white;
+  }
+  .widthHund{
+	  width:100%;
+  }
+  .cent2 {
+  width: 70%;
+  margin: 0 auto;
+}
+	a:link{
+		color:blue
+	}
+	a:visited{
+		color:purple
+	}
+	td{
+		text-align:center
+	}
+	.flex-container{
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+	.basicFlex{
+		display: flex;
+	}
+.custBord{
+	border: solid 2px #c79216;
+}
+.textCent{
+	text-align:center;
+	width:100%;
+}
+
+.notStdLink{
+	color:black
+}
+.margins{
+	margin-left:20%;
+	margin-right:20%;
+}
+.buttonSize{
+	width:auto;
+}
+.graphWid{
+	width:auto;
+}
+.main-title{
+	font-size:32px
+}
+ @media screen and (max-width: 600px) {
+  .margins{
+	margin-left:10%;
+	margin-right:10%;
+  }
+  .buttonSize{
+	width:100%;
+  }
+  .graphWid{
+	width:100%;
+  }
+  .main-title{
+	font-size:22px
+}
+
+ }

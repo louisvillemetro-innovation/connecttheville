@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+	 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="style.css"/>
+	  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <title>Louisville Digital Inclusion</title>
+</head>
+
+<body style="background-color:white">
+<!--Goes on every page--->
+<nav id="nav"class="navbar navbar-inverse navbar-fixed-top" style="background-color:#000066;border-bottom:3px solid #c79216">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="index.html">Louisville Digital Inclusion</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li><a href="about.html">ABOUT</a></li>
+        <li><a href="DigitalInclusionFund.html">DIGITAL INCLUSION FUND</a></li> 
+		<li><a href="ComputerDonations.html">COMPUTER DONATIONS</a></li>
+		<li><a href="ContactUs-StayInvolved.html">CONTACT US/STAY INVOLVED</a></li>
+        <li><a class="w3-btn w3-white custBord w3-round-xlarge" style="border: solid 1px #c79216;padding:10px;" href="https://cflfund.net/NetCommunity/givenow"><span style="color:#000066">DONATE NOW</span></a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<!------------>
+<div class="firstDiv">
+	<div style=""class="flex-container">
+		<img style="width:50%;border: solid 1px #c79216;padding:10px;margin-bottom:1px;padding:12px" class="w3-white  w3-round-xlarge" src="./resources/contact.png"></img>	
+	</div>
+	<!--<h1 class="widthHund"style="text-align:center; background-color:#000066;color:white">Contact Us/Stay Involved</h1>-->
+	<div id="about1" class="container-fluid backWhite">
+		<div class="margins">
+			<p>&emsp;If you are interested in staying informed and would like to receive biannual updates about our digital inclusion efforts, fill out the form below to be added to our mailing list!</p>
+		</div>
+	</div>
+</div>
+<script>
+headFix();
+function headFix() {
+$(".firstDiv").css("margin-top",$("#nav").height()+25+"px");
+}
+$( window ).resize(function(){
+headFix();
+});
+</script>
+<br/>
+<div class="flex-container">
+	<div class="w3-white custBord w3-round-xlarge"style="padding:50px">
+		<h2>Join the mailing list!</h2>
+		<form method="POST"id="form1"onsubmit="submitForm()" target="_self"action="https://script.google.com/macros/s/AKfycbyrnKYPj5sW6g27lHf8kiyv5gCZ4FG0F04ggMU5I3kXFiCv_XVE/exec">
+			<p>Enter your name</p>
+			<input id="name"type="text" autocomplete='name' name="name"placeholder="First Last" required></input>
+			<p>Enter your email</p>
+			<input id="email"type="text" name="email"autocomplete='email'placeholder="example@example.com" required></input>
+			<p>Enter your phone number</p>
+			<input id="phone"type="text" name="phone"autocomplete='tel-national'placeholder="555-555-5555"></input>
+			<input type="submit"></input>
+		</form>
+<script>
+
+$(document).ready(function(){
+   var $form = $('form');
+   $form.submit(function(){
+      $.post($(this).attr('action'), $(this).serialize(), function(response){
+      },'json');
+      return false;
+   });
+});
+
+
+	function submitForm(){
+		alert("The form was submitted");
+	}
+	
+	
+</script>
+	</div>
+</div>
+</div>
+
+
+</body>
+</html>

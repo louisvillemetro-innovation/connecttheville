@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="style.css"/>
+	  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <title>Louisville Digital Inclusion</title>
+</head>
+<body style="background-color:#000066">
+<!--Goes on every page--->
+<nav id="nav"class="navbar navbar-inverse navbar-fixed-top" style="background-color:#000066;border-bottom:3px solid #c79216">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a style=""class="navbar-brand main-title" href="index.html">Louisville Digital Inclusion</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul style="margin-left:5%;margin-right:5%"class="nav navbar-nav">
+        <li><a href="about.html">ABOUT</a></li>
+        <li><a href="DigitalInclusionFund.html">DIGITAL INCLUSION FUND</a></li> 
+		<li><a href="ComputerDonations.html">COMPUTER DONATIONS</a></li>
+		<li><a href="ContactUs-StayInvolved.html">CONTACT US/STAY INVOLVED</a></li>
+        <li><a class="w3-btn w3-white custBord w3-round-xlarge" style="border: solid 1px #c79216;padding:10px;" href="https://cflfund.net/NetCommunity/givenow"><span style="color:#000066">DONATE NOW</span></a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<!------------>
+<div id="gallery" class="firstDiv container-fluid text-center widthHund backWhite"><br>
+<div class="cent"style="width:50%;">
+  <div class="mySlides"><a style="color:black"href="about.html"><img src="./resources/About.jpg" style="width:100%"><h2 class="textCent">About</h2></a></div>
+  <div class="mySlides"><a style="color:black"href="DigitalInclusionFund.html"><img src="./resources/Computer Donation Header.JPG" style="width:100%"><h2 class="textCent">Computer Donation</h2></a></div>
+  <div class="mySlides"><a style="color:black"href="ContactUs-StayInvolved.html"><img src="./resources/Connect with Us Header.JPG" style="width:100%" ><h2 class="textCent">Connect with Us</h2></a></div>
+  <div class="mySlides"><a style="color:black"href="DigitalInclusionFund.html#lowCostInt"><img src="./resources/Low Cost Internet Sign Ups Header2.JPG" style="width:100%" ><h2 class="textCent">Low Cost Internet Sign-ups</h2></a></div>
+
+  <button style="position:absolute;"class=" galBut w3-button w3-black w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+  <button style="position:absolute;"class=" galBut w3-button w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</button>
+</div><br/>
+</div>
+<script>
+headFix();
+function headFix() {
+$(".firstDiv").css("margin-top",$("#nav").height()+0+"px");
+}
+function butFix() {
+$(".galBut").css("top",($("#gallery").height())+"px");
+}
+
+$( window ).resize(function(){
+headFix();
+butFix();
+});
+</script>
+<div id="bs" class="flex-container">
+	<div id="b1"><a class="buttonSize w3-btn w3-round-xlarge" style="background-color:#c79216;font-size: 22px;border: solid 1px white;margin:10%" href="https://cflfund.net/NetCommunity/givenow"><span style="color:white">Donate Money</span></a></div>
+	<div id="b2"><button class="buttonSize w3-btn w3-round-xlarge" style="background-color:#c79216;font-size: 22px;border: solid 1px white;margin:10%"><span style="color:white">Donate Computers</span></button></div>
+</div>
+
+<script>
+resizeButtons();
+function resizeButtons(){
+var w = window.innerWidth;
+if(w<700){
+var hold1=$("#bs")[0];
+var hold2=$("#b1")[0];
+var hold3=$("#b2")[0];
+$("#b2").replaceWith("");
+$("body").append('<div id="bs" class="flex-container">	<div id="b2"><button class="buttonSize w3-btn w3-round-xlarge" style="background-color:#c79216;font-size: 22px;border: solid 1px white;margin:10%"><span style="color:#000066">Donate Computers</span></button></div></div>');
+//$("#bs2").append(hold3);
+}
+}
+$( window ).resize(function(){
+resizeButtons();
+});
+var myIndex = 0;
+var slideIndex = 0;
+carousel()
+
+
+function carousel() {
+    showDivs(slideIndex += 1);
+	butFix();
+    setTimeout(carousel, 3500); // Change image every 2 seconds
+}
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  if (n > x.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = x.length}
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";  
+  }
+  x[slideIndex-1].style.display = "block";  
+}
+function plusDivs(n) {
+
+  showDivs(slideIndex += n);
+}
+
+</script>
+
+
+</body>
+</html>
+
+		
